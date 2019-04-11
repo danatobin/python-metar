@@ -55,13 +55,17 @@ RUNWAY_RE = re.compile(r"""^(RVRNO |
                             (V(?P<high>(M|P)?\d\d\d\d))?
                               (?P<unit>FT)?[/NDU]*)\s+""",
                               re.VERBOSE)
-WEATHER_RE = re.compile(r"""^(?P<int>(-|\+|VC)*)
+
+***********************************************************************
+***WEATHER_RE = re.compile(r"""^(?P<int>(-|\+|VC)*)
                              (?P<desc>(MI|PR|BC|DR|BL|SH|TS|FZ)+)?
                              (?P<prec>(DZ|RA|SN|SG|IC|PL|GR|GS|UP|/)*)
                              (?P<obsc>BR|FG|FU|VA|DU|SA|HZ|PY)?
                              (?P<other>PO|SQ|FC|SS|DS|NSW|/+)?
                              (?P<int2>[-+])?\s+""",
-                             re.VERBOSE)
+                             re.VERBOSE)***
+***********************************************************************
+
 SKY_RE= re.compile(r"""^(?P<cover>VV|CLR|SKC|SCK|NSC|NCD|BKN|SCT|FEW|[O0]VC|///)
                         (?P<height>[\dO]{2,4}|///)?
                         (?P<cloud>([A-Z][A-Z]+|///))?\s+""",
